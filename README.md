@@ -4,4 +4,6 @@ Compiler command
 
 gcc -Wall relais.c -o relais -lwiringPi -lwiringPiDev
 
-Mor details are following
+More details are following
+
+relais  without a extension is the binary
