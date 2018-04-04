@@ -26,7 +26,7 @@
 
 int main (int argc, char *argv [])
 {
- int iRelaiHoldTime = 0;
+int iRelaiHoldTime = 0;
 int iSql = 0;
 int iReady = 0;
 
@@ -42,8 +42,7 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 // Setup the PiFace board
 
   piFaceSetup (PIFACE) ;
-  //digitalWrite (RELAIS3, HIGH) ;  // Off	
-
+  
   for (;;)
   {
     if (digitalRead(SQL)  == HIGH)
@@ -53,10 +52,7 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 	 {
 		digitalWrite (RELAIS1, HIGH) ;  // On
 		digitalWrite (RELAIS2, HIGH) ;  // On		
-		//digitalWrite (RELAIS3, LOW) ;   // On
-		//delay(100);
 		digitalWrite (PTT, HIGH) ;          // On
-		//delay (RELAISHOLDTIME) ;      // mS
 		system(command1);
 		iReady=1;                                    // for short open squelch
 	}
@@ -71,8 +67,7 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 		if ((digitalRead(SQL) == LOW) && (iSql == 1))
 		{
 			iSql=0;
-			system(command2);
-			// Hier roger beep
+			system(command2);		// Hier roger beep
 		}
 		
 		delay (1) ;      // mS
@@ -80,7 +75,7 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 	}
 	while (iRelaiHoldTime < RELAISHOLDTIME); 
 	
-	system(command3);
+	system(command3);   // Bye Bye 
 	
 	digitalWrite (PTT, LOW) ; 		
 	digitalWrite (RELAIS1, LOW) ;  // Off
