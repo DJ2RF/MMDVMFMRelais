@@ -22,7 +22,7 @@ More details are following
 
 schematics.jpg gives a overview how to connect raspi, mmdvm, piface and usb soundcard
 
-at https://github.com/DJ2RF/MMDVMFMRelais/blob/master/schematics.jpg you can find a description piface
+at http://www.piface.org.uk/products/piface_digital/ you can find a description piface
 
 relais  without a extension is the binary
 
