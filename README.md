@@ -20,6 +20,10 @@ gcc -Wall relais.c -o relais -lwiringPi -lwiringPiDev
 
 More details are following
 
+schematics.jpg gives a overview how to connect raspi, mmdvm, piface and usb soundcard
+
+at https://github.com/DJ2RF/MMDVMFMRelais/blob/master/schematics.jpg you can find a description piface
+
 relais  without a extension is the binary
 
    This program is free software: you can redistribute it and/or modify
