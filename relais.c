@@ -80,8 +80,8 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 	    digitalWrite (PTT, LOW) ; 		
 	    digitalWrite (RELAIS1, LOW) ;  // Off
 	    digitalWrite (RELAIS2, LOW) ;  // Off
-        } // End of if (digitalRead(MMDVMPTT) == HIGH)  
-     }
+        } 
+     } // End of if (digitalRead(MMDVMPTT) == HIGH)  
    delay(200);
    }
   return 0 ;
