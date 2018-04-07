@@ -55,9 +55,9 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 		digitalWrite (PTT, HIGH) ;          // On
 		system(command1);
 		iReady=1;                                    // for short open squelch
-	}
-	do
-	{
+	
+	    do
+	    {
                 if ((digitalRead(SQL) == HIGH) || (iReady == 1))
 		{
 			iReady=0;
@@ -72,18 +72,19 @@ strcpy( command3, "aplay -D sysdefault:CARD=Device  /home/pi/work/piface/bye.wav
 		
 		delay (1) ;      // mS
 		iRelaiHoldTime++;
-	}
-	while (iRelaiHoldTime < RELAISHOLDTIME); 
+	    }
+	    while (iRelaiHoldTime < RELAISHOLDTIME); 
 	
-	system(command3);   // Bye Bye 
+	    system(command3);   // Bye Bye 
 	
-	digitalWrite (PTT, LOW) ; 		
-	digitalWrite (RELAIS1, LOW) ;  // Off
-	digitalWrite (RELAIS2, LOW) ;  // Off
-	
-        }
+	    digitalWrite (PTT, LOW) ; 		
+	    digitalWrite (RELAIS1, LOW) ;  // Off
+	    digitalWrite (RELAIS2, LOW) ;  // Off
+        } // End of if (digitalRead(MMDVMPTT) == HIGH)  
+     }
    delay(200);
    }
   return 0 ;
 }
+
 
